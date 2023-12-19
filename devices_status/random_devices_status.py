@@ -1,12 +1,12 @@
 import random
-import json
 from datetime import datetime
+import json
 
 
 
-def random_device_statu(missions: list, devices: list):
+def random_device_status(missions: list, devices: list, status: list):
 
-    status: list = ['excellent', 'good', 'warning', 'faulty', 'killed', 'unknown'] 
+    #status: list = ['excellent', 'good', 'warning', 'faulty', 'killed', 'unknown'] 
     range_selecting = random.randint(1, 5)
     selected_mission: list = random.sample(missions, range_selecting)
     print(selected_mission)
@@ -20,20 +20,8 @@ def random_device_statu(missions: list, devices: list):
             dices_status[mission]['fecha'] = fecha
             dices_status[mission][device] = random.choice(status)
             
-            
     return dices_status
         
 
 
-#Possible states of devices.
-
-devices: list = ['satelite', 'spacecraft', 'space vehicle', 'spacesuit','other components']
-missions: list = ['OrbitOne', 'ColonyMoon', 'VacMars', 'GalaxyTwo', 'Unknow']
-    
-
-# Imprimir diccionario en formato JSON con indentación
-
-dices_status = random_device_statu(missions, devices)
-json_string = json.dumps(dices_status, indent=4)
-print(json_string)
 
