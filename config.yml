@@ -1,0 +1,24 @@
+# devices_status
+devices_status:
+  - excellent
+  - good
+  - warning
+  - faulty
+  - killed
+  - unknown
+
+# list missions
+list_misions:
+  - OrbitOne
+  - ColonyMoon
+  - VacMars 
+  - GalaxyTwo
+  - Unknow
+
+# list_divices
+list_divices:
+  - satelite
+  - spacecraft
+  - space vehicle
+  - spacesuit 
+  - other components
