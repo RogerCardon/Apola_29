@@ -1,5 +1,5 @@
 
-path:str="C:/Users/lordr/Desktop/a_pola_29/Apola_29/devices"
+path:str="devices" 
 mission_type:list=["ORBONE","CLNM","TMRS","GALXONE","UNKN"]
 #registry_number_1:list=[1,2,3,4,5,6,7,8,9,10]
 registry_number_2:list=[1,2,3,4,5,6,7,8,9,10]
@@ -10,4 +10,4 @@ def file_generator(path:str,mission_type:list,registry_number_2:list)->str:
     result=file_x
   return result
 
-file_generator(path,mission_type[2],registry_number_2[0])
+file_generator(path,mission_type[3],registry_number_2[2])
