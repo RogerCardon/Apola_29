@@ -1,24 +1,26 @@
-# devices_status
+consecutive_number: 15
 devices_status:
-  - excellent
-  - good
-  - warning
-  - faulty
-  - killed
-  - unknown
-
-# list missions
-list_misions:
-  - OrbitOne
-  - ColonyMoon
-  - VacMars 
-  - GalaxyTwo
-  - Unknow
-
-# list_divices
+- excellent
+- good
+- warning
+- faulty
+- killed
+- unknown
+labels:
+- ORBONE
+- CLNM
+- TMRS
+- GALXONE
+- UNKN
 list_divices:
-  - satelite
-  - spacecraft
-  - space vehicle
-  - spacesuit 
-  - other components
+- satelite
+- spacecraft
+- space vehicle
+- spacesuit
+- other componentsdata_mission_devices
+list_misions:
+- OrbitOne
+- ColonyMoon
+- VacMars
+- GalaxyTwo
+- Unknow

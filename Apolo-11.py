@@ -1,28 +1,22 @@
-# importación de los modulos a utilizar
-
+# importación de los módulos a utilizar
+from tools.load_tools import configuration_file_load
 from devices_status.random_devices_status import random_device_status
+from file_handling.file_generator import file_generator
 import json
-import yaml
-
 
 
 # Cargar configuraciones desde el archivo YAML
-with open('config.yml', 'r') as file:
-    config_data = yaml.safe_load(file)
+config_data: dict = configuration_file_load()
 
-    
-# Crear las variables que contienen los datos de configuracion 
-missions: list =  config_data['list_misions']
-devices: list =  config_data['list_divices']
-status: list =  config_data['devices_status']
-data_mission_devices:dict= random_device_status(missions, devices, status)
+# Ejecutar las función random_device_status ingresando los
+# datos de configuración previamente cargados
+data_mission_devices: dict = random_device_status(config_data)
 
-# Ejecutar las funcion random_device_status ingresando los datos de configuracion previamente cargados 
-dices_status = random_device_status(missions, devices, status)
+# Ejecutamos la función file_generator
+# para generar los archivos de las misiones
+file_generator('devices')
 
-
-# Imprimimos el diccionario que retorna la funcion random_device_status
-json_string = json.dumps(dices_status, indent=4)
+# Imprimimos el diccionario que retorna la función random_device_status
+json_string = json.dumps(data_mission_devices, indent=4)
 print(json_string)
-
 print('---------------------------------------------------------------')

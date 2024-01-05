@@ -1,10 +1,10 @@
-from tools.load_tools import cargar_configuracion
 import yaml
 
 
 def consecutive_number_update():
-    # Get the current configuration
-    configuration = cargar_configuracion()
+    # Cargar la configuración actual desde el archivo config.yml
+    with open('config.yml', 'r') as file:
+        configuration = yaml.safe_load(file)
 
     # Incrementar el número consecutivo
     configuration['consecutive_number'] += 1

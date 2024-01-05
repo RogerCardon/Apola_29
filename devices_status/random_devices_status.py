@@ -1,16 +1,20 @@
 import random
 from datetime import datetime
-import json
 
 
+def random_device_status(data_config: dict) -> dict:
+    # Se cargan las variables a utilizar desde data_config
+    missions: list = data_config['missions']
+    devices: list = data_config['devices']
+    status: list = data_config['status']
 
-def random_device_status(missions: list, devices: list, status: list):
-
-    #status: list = ['excellent', 'good', 'warning', 'faulty', 'killed', 'unknown'] 
+    # Se seleccionan las misiones que se utilizaran
     range_selecting = random.randint(1, 5)
     selected_mission: list = random.sample(missions, range_selecting)
     print(selected_mission)
 
+    # Este diccionario contendrá los datos sobre los
+    # dispositivos y sus estados respecto a las misiones seleccionadas
     dices_status: dict = {}
     fecha = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
@@ -19,9 +23,5 @@ def random_device_status(missions: list, devices: list, status: list):
         for device in devices:
             dices_status[mission]['fecha'] = fecha
             dices_status[mission][device] = random.choice(status)
-            
+
     return dices_status
-        
-
-
-

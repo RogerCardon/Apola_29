@@ -1,13 +1,14 @@
-
-path:str="devices" 
-mission_type:list=["ORBONE","CLNM","TMRS","GALXONE","UNKN"]
-#registry_number_1:list=[1,2,3,4,5,6,7,8,9,10]
-registry_number_2:list=[1,2,3,4,5,6,7,8,9,10]
+from tools.load_tools import configuration_file_load
+from tools.write_tools import consecutive_number_update
+import random
 
 
-def file_generator(path:str,mission_type:list,registry_number_2:list)->str:
-  with open((f'{path}/APL-{mission_type}-{registry_number_2}.log'),"x") as file_x:
-    result=file_x
-  return result
+def file_generator(path: str) -> str:
+    config_data: dict = configuration_file_load()
+    registry_number = config_data['consecutive_number']
+    mission = random.choice(config_data['mission_label'])
+    with open((f'{path}/APL-{mission}-{registry_number}.log'), "x") as file_x:
+        result = file_x
 
-file_generator(path,mission_type[3],registry_number_2[2])
+    consecutive_number_update()
+    return result
