@@ -14,9 +14,9 @@ data_mission_devices: dict = random_device_status(config_data)
 
 # Ejecutamos la función file_generator
 # para generar los archivos de las misiones
-file_generator('devices')
+file_generator('devices',data_mission_devices)
 
 # Imprimimos el diccionario que retorna la función random_device_status
 json_string = json.dumps(data_mission_devices, indent=4)
-print(json_string)
-print('---------------------------------------------------------------')
+#print(json_string)
+#print('---------------------------------------------------------------')
