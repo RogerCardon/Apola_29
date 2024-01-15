@@ -15,7 +15,16 @@ data_mission_devices: dict = random_device_status(config_data)
 
 # Ejecutamos la función file_generator
 # para generar los archivos de las missiones
-file_generator('devices')
+
+# Diccionario que contendra el dicicionario que se escribira en el .log
+dict_data_mission_devices = {}
+
+for clave, valor in data_mission_devices.items():
+    dict_data_mission_devices[clave] = valor
+    file_generator('devices', dict_data_mission_devices)
+    
+    # Se rescribe el diccionario para que no acomule los datos
+    dict_data_mission_devices = {}
 
 # Generamos las estadisticas de las los estados de los
 # dispositivos de las misiones

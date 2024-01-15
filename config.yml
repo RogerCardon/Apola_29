@@ -1,4 +1,4 @@
-consecutive_number: 31
+consecutive_number: 3
 devices_status:
 - excellent
 - good
@@ -6,12 +6,6 @@ devices_status:
 - faulty
 - killed
 - unknown
-labels:
-- ORBONE
-- CLNM
-- TMRS
-- GALXONE
-- UNKN
 list_divices:
 - satelite
 - spacecraft
@@ -24,3 +18,9 @@ list_misions:
 - VacMars
 - GalaxyTwo
 - Unknow
+mission_label:
+  ColonyMoon: CLNM
+  GalaxyTwo: GALXONE
+  OrbitOne: ORBONE
+  Unknow: UNKN
+  VacMars: TMRS

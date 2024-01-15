@@ -18,7 +18,7 @@ def configuration_file_load() -> None:
     devices = config_data['list_divices']
     status = config_data['devices_status']
     consecutive_number = config_data['consecutive_number']
-    mission_label = config_data['labels']
+    mission_label = config_data['mission_label']
 
     return {
         'missions': missions,
