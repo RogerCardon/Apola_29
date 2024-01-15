@@ -4,20 +4,20 @@
             "excellent": 0,
             "good": 0,
             "warning": 3,
-            "faulty": 1,
+            "faulty": 2,
             "killed": 0,
             "unknown": 0
         },
         "spacecraft": {
             "excellent": 1,
             "good": 0,
-            "warning": 1,
+            "warning": 2,
             "faulty": 0,
             "killed": 2,
             "unknown": 0
         },
         "space_vehicle": {
-            "excellent": 2,
+            "excellent": 3,
             "good": 0,
             "warning": 0,
             "faulty": 1,
@@ -30,11 +30,11 @@
             "warning": 1,
             "faulty": 0,
             "killed": 1,
-            "unknown": 0
+            "unknown": 1
         },
         "other_componentsdata_mission_devices": {
             "excellent": 1,
-            "good": 0,
+            "good": 1,
             "warning": 0,
             "faulty": 2,
             "killed": 1,
@@ -85,26 +85,26 @@
     },
     "VacMars": {
         "satelite": {
-            "excellent": 0,
+            "excellent": 1,
             "good": 1,
             "warning": 2,
             "faulty": 0,
             "killed": 1,
-            "unknown": 2
+            "unknown": 3
         },
         "spacecraft": {
             "excellent": 2,
             "good": 0,
-            "warning": 1,
+            "warning": 3,
             "faulty": 2,
             "killed": 1,
             "unknown": 0
         },
         "space_vehicle": {
             "excellent": 1,
-            "good": 1,
+            "good": 2,
             "warning": 1,
-            "faulty": 2,
+            "faulty": 3,
             "killed": 0,
             "unknown": 1
         },
@@ -114,15 +114,15 @@
             "warning": 0,
             "faulty": 2,
             "killed": 1,
-            "unknown": 0
+            "unknown": 2
         },
         "other_componentsdata_mission_devices": {
             "excellent": 1,
-            "good": 1,
+            "good": 2,
             "warning": 2,
             "faulty": 0,
             "killed": 1,
-            "unknown": 1
+            "unknown": 2
         }
     },
     "GalaxyTwo": {
@@ -132,7 +132,7 @@
             "warning": 1,
             "faulty": 0,
             "killed": 2,
-            "unknown": 1
+            "unknown": 2
         },
         "spacecraft": {
             "excellent": 0,
@@ -140,12 +140,12 @@
             "warning": 1,
             "faulty": 2,
             "killed": 1,
-            "unknown": 2
+            "unknown": 3
         },
         "space_vehicle": {
             "excellent": 0,
             "good": 1,
-            "warning": 0,
+            "warning": 1,
             "faulty": 2,
             "killed": 3,
             "unknown": 1
@@ -156,12 +156,12 @@
             "warning": 2,
             "faulty": 1,
             "killed": 2,
-            "unknown": 0
+            "unknown": 1
         },
         "other_componentsdata_mission_devices": {
             "excellent": 0,
             "good": 3,
-            "warning": 0,
+            "warning": 1,
             "faulty": 1,
             "killed": 0,
             "unknown": 3
