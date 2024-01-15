@@ -2,6 +2,7 @@
 from tools.load_tools import configuration_file_load
 from devices_status.random_devices_status import random_device_status
 from file_handling.file_generator import file_generator
+from statistics.mission_statistics import mission_statistics_generator
 import json
 
 
@@ -13,8 +14,12 @@ config_data: dict = configuration_file_load()
 data_mission_devices: dict = random_device_status(config_data)
 
 # Ejecutamos la función file_generator
-# para generar los archivos de las misiones
+# para generar los archivos de las missiones
 file_generator('devices')
+
+# Generamos las estadisticas de las los estados de los
+# dispositivos de las misiones
+mission_statistics_generator(data_mission_devices)
 
 # Imprimimos el diccionario que retorna la función random_device_status
 json_string = json.dumps(data_mission_devices, indent=4)

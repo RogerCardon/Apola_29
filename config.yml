@@ -1,4 +1,4 @@
-consecutive_number: 15
+consecutive_number: 31
 devices_status:
 - excellent
 - good
@@ -15,9 +15,9 @@ labels:
 list_divices:
 - satelite
 - spacecraft
-- space vehicle
+- space_vehicle
 - spacesuit
-- other componentsdata_mission_devices
+- other_componentsdata_mission_devices
 list_misions:
 - OrbitOne
 - ColonyMoon
