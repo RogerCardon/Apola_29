@@ -1,8 +1,4 @@
 Unknow:
-  fecha: 17-01-2024 04:32:09
-  hash: Funcion hash
-  other_componentsdata_mission_devices: killed
-  satelite: warning
-  space_vehicle: killed
-  spacecraft: good
-  spacesuit: excellent
+  fecha: 17-01-2024 05:21:39
+  hash: hash
+  spacecraft: faulty
