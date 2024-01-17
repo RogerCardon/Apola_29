@@ -1,1 +1,0 @@
-# hash: nombre+fecha+tipoDispo de 16
