@@ -1,7 +1,7 @@
 from tools.load_tools import configuration_file_load
 from tools.write_tools import consecutive_number_update
-import random
 import yaml
+
 
 def file_generator(path: str, data_mission_devices: dict) -> str:
     config_data: dict = configuration_file_load()

@@ -22,7 +22,7 @@ dict_data_mission_devices = {}
 for clave, valor in data_mission_devices.items():
     dict_data_mission_devices[clave] = valor
     file_generator('devices', dict_data_mission_devices)
-    
+
     # Se rescribe el diccionario para que no acomule los datos
     dict_data_mission_devices = {}
 
