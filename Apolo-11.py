@@ -21,8 +21,8 @@ data_mission_devices: dict = random_device_status(config_data)
 # Diccionario que contendra el dicicionario que se escribira en el .log
 dict_data_mission_devices = {}
 
-for clave, valor in data_mission_devices.items():
-    dict_data_mission_devices[clave] = valor
+for key, value in data_mission_devices.items():
+    dict_data_mission_devices[key] = value
     file_generator_2('devices', dict_data_mission_devices)
 
     # Se rescribe el diccionario para que no acomule los datos
