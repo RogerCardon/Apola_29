@@ -30,7 +30,7 @@ for clave, valor in data_mission_devices.items():
 
 # Generamos las estadisticas de las los estados de los
 # dispositivos de las misiones
-mission_statistics_generator(data_mission_devices)
+mission_statistics_generator()
 
 # Luego de ejecutar la funcion que genera los estadisticos
 # de ejecuta la funcion que mueve los archvios a la carpeta buckups
