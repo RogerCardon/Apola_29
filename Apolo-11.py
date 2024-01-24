@@ -2,7 +2,6 @@
 from tools.load_tools import configuration_file_load
 from devices_status.random_devices_status import random_device_status
 from tools.file_cleaner import file_cleaner
-
 from file_handling.file_generator import file_generator, file_generator_2
 from statistics.mission_statistics import mission_statistics_generator
 import json
@@ -39,8 +38,7 @@ mission_statistics_generator()
 file_cleaner('devices', 'backups')
 
 # Imprimimos el diccionario que retorna la función random_device_status
-json_string = json.dumps(data_mission_devices, indent=4)
-print(json_string)
-print('---------------------------------------------------------------')
-print(f"nombre del sistema operativo : {os.name}")
-print(f"separador de ruta            : {os.sep}")
+#json_string = json.dumps(data_mission_devices, indent=4)
+#print(json_string)
+#print('---------------------------------------------------------------')
+
