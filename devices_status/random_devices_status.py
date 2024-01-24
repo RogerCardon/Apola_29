@@ -15,13 +15,13 @@ def random_device_status(data_config: dict) -> dict:
 
     # Este diccionario contendrá los datos sobre los
     # dispositivos y sus estados respecto a las misiones seleccionadas
-    dices_status: dict = {}
+    divices_status: dict = {}
     fecha = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
     for mission in selected_mission:
-        dices_status[mission] = {}
+        divices_status[mission] = {}
         for device in devices:
-            dices_status[mission]['fecha'] = fecha
-            dices_status[mission][device] = random.choice(status)
+            divices_status[mission]['fecha'] = fecha
+            divices_status[mission][device] = random.choice(status)
 
-    return dices_status
+    return divices_status
