@@ -1,19 +1,19 @@
 import os
 
 
-def file_cleaner(carpeta_origen: str, carpeta_destino: str):
+def file_cleaner(origin_directory: str, destination_directory: str):
 
     # Verificar si la carpeta de backups existe, si no, crearla
-    if not os.path.exists(carpeta_destino):
-        os.makedirs(carpeta_destino)
+    if not os.path.exists(destination_directory):
+        os.makedirs(destination_directory)
 
     # Obtener la lista de archivos en la carpeta de origen
-    archivos_a_mover = os.listdir(carpeta_origen)
+    files_to_move = os.listdir(origin_directory)
 
     # Mover cada archivo a la carpeta de backups
-    for archivo in archivos_a_mover:
-        ruta_origen = os.path.join(carpeta_origen, archivo)
-        ruta_destino = os.path.join(carpeta_destino, archivo)
+    for file in files_to_move:
+        origin_path = os.path.join(origin_directory, file)
+        destination_path = os.path.join(destination_directory, file)
         
         # Renombrar el archivo moviéndolo
-        os.rename(ruta_origen, ruta_destino)
+        os.rename(origin_path, destination_path)
