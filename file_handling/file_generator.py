@@ -9,23 +9,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def file_generator(path: str, data_mission_devices: dict) -> str:
-    config_data: dict = configuration_file_load()
-    registry_number = config_data['consecutive_number']
-    mission_name = list(data_mission_devices.keys())[0]
-    mission = config_data['mission_label'][mission_name]
-
-    # Crear el contenido en formato YAML
-    yaml_content = yaml.dump(data_mission_devices, default_flow_style=False)
-
-    # Escribir en el archivo en formato YAML
-    with open(f'{path}/APL-{mission}-{registry_number}.log', "w") as file_x:
-        result = file_x.write(str(yaml_content))
-
-    consecutive_number_update()
-    return result
-
-
-def file_generator_2(path: str, data_mission_devices: dict) -> str:
     try:
         data_device: dict = {}
         registry_number = None
@@ -39,7 +22,8 @@ def file_generator_2(path: str, data_mission_devices: dict) -> str:
         for device, status in data_mission_devices[mission_name].items():
             config_data: dict = configuration_file_load()
             registry_number = config_data['consecutive_number']
-            hash_device: str = hash_generator(fecha, mission_name, device, status)
+            hash_device: str = hash_generator(
+                fecha, mission_name, device, status)
 
             if device != 'fecha':
                 data_device[mission_name] = {
