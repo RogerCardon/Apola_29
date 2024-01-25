@@ -1,10 +1,8 @@
-from tools.tools import Tools
-import json 
+from devices_status.random_devices_status import RandomDevice
 
 
-tools = Tools('config.yml')
+randonDivice = RandomDevice('config.yml')
 
-path = tools.path_configuration_file
-print(path)
+dict = randonDivice.random_device_status()
 
-datos_configuracion = 
+print(dict)
