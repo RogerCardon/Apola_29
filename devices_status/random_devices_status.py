@@ -55,15 +55,15 @@ class RandomDevice(Tools):
 
         # Este diccionario contendrá los datos sobre los
         # dispositivos y sus estados respecto a las misiones seleccionadas
-        divices_status: dict = {}
+        devices_status: dict = {}
         fecha = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
         try:
             for mission in list_selected_mission:
-                divices_status[mission] = {}
+                devices_status[mission] = {}
                 for device in devices:
-                    divices_status[mission]['fecha'] = fecha
-                    divices_status[mission][device] = random.choice(status)
-            return divices_status
+                    devices_status[mission]['fecha'] = fecha
+                    devices_status[mission][device] = random.choice(status)
+            return devices_status
         except Exception as e:
             logging.error(
                 f'Se genero el error: "{e}" en la generacion aleatoria de los estados de los dispositivos')
