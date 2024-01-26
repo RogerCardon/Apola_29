@@ -1,10 +1,10 @@
 # importación de los módulos a utilizar
 # from tools.load_tools import configuration_file_load
-from devices_status.random_devices_status import random_device_status
-from tools.file_cleaner import file_cleaner
+from devices_status.random_devices_status import RandomDevice
 from tools.tools import Tools
 from file_handling.file_generator import file_generator
 from statistics.mission_statistics import mission_statistics_generator
+from typing import Dict, Callable, List, Optional
 import time
 import os
 import logging
@@ -14,6 +14,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 while True:
 
+    path_configuration_file: Optional[str] = 'config.yml'
+
     # Verificar si la carpeta de backups existe, si no, crearla
     if not os.path.exists('devices'):
         os.makedirs('devices')
@@ -22,15 +24,14 @@ while True:
     # Cargar configuraciones desde el archivo YAML
     # config_data: dict = configuration_file_load()
 
-    tools = Tools('config.yml')
+    tools = Tools(path_configuration_file)
 
     config_data: dict = tools.configuration_file_load()
     # Ejecutar las función random_device_status ingresando los
     # datos de configuración previamente cargados
-    data_mission_devices: dict = random_device_status(config_data)
 
-    # Ejecutamos la función file_generator
-    # para generar los archivos de las missiones
+    randomDevice = RandomDevice(path_configuration_file)
+    data_mission_devices: dict = randomDevice.random_device_status()
 
     # Diccionario que contendra el dicicionario que se escribira en el .log
     dict_data_mission_devices = {}
@@ -49,7 +50,8 @@ while True:
     # Luego de ejecutar la funcion que genera los estadisticos
     # de ejecuta la funcion que mueve los archvios a la carpeta buckups
 
-    file_cleaner('devices', 'backups')
+    tools.file_cleaner('devices', 'backups')
+    # file_cleaner('devices', 'backups')
 
     # Imprimimos el diccionario que retorna la función random_device_status
     # json_string = json.dumps(data_mission_devices, indent=4)

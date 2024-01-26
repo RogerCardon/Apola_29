@@ -1,7 +1,8 @@
 """Esta librería permite manipular archivos .yml"""
 import yaml
-import logging
 from typing import Dict, Optional, Union
+import logging
+
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
