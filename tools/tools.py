@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 class Tools:
 
-    _devices: Optional[str] = 'divices'
+    _devices: Optional[str] = 'devices'
     __backups: Optional[str] = 'backups'
 
     def __init__(self, path_configuration_file: str):
