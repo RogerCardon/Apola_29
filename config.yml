@@ -1,4 +1,4 @@
-consecutive_number: 970
+consecutive_number: 2440
 devices_status:
 - excellent
 - good
@@ -6,6 +6,9 @@ devices_status:
 - faulty
 - killed
 - unknown
+exec_waiting_time: 20
+file_range_max: 100
+file_range_min: 1
 list_divices:
 - satelite
 - spacecraft
