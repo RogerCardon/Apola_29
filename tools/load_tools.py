@@ -22,13 +22,16 @@ def configuration_file_load() -> None:
         status = config_data['devices_status']
         consecutive_number = config_data['consecutive_number']
         mission_label = config_data['mission_label']
+        exec_waiting_time = config_data['exec_waiting_time']
+
 
         return {
             'missions': missions,
             'devices': devices,
             'status': status,
             'consecutive_number': consecutive_number,
-            'mission_label': mission_label
+            'mission_label': mission_label,
+            'exec_waiting_time' : exec_waiting_time
         }
     except Exception as e:
         logging.error(

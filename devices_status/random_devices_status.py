@@ -27,11 +27,11 @@ def random_device_status(data_config: dict) -> dict:
     
     try:
         for mission in list_selected_mission:
-            divices_status[mission] = {}
+            devices_status[mission] = {}
             for device in devices:
-                divices_status[mission]['fecha'] = fecha
-                divices_status[mission][device] = random.choice(status)
-        return divices_status
+                devices_status[mission]['fecha'] = fecha
+                devices_status[mission][device] = random.choice(status)
+        return devices_status
     except Exception as e:
         logging.error(
             f'Se genero el error: "{e}" en la generacion aleatoria de los estados de los dispositivos')
