@@ -1,22 +1,29 @@
 # importación de los módulos a utilizar
-#from tools.load_tools import configuration_file_load
+# from tools.load_tools import configuration_file_load
 from devices_status.random_devices_status import random_device_status
 from tools.file_cleaner import file_cleaner
 from tools.tools import Tools
 from file_handling.file_generator import file_generator
 from statistics.mission_statistics import mission_statistics_generator
-import json
-import os
 import time
+import os
+import logging
+
+# configurar el nivel
+logging.basicConfig(level=logging.DEBUG)
 
 while True:
 
-    # Cargar configuraciones desde el archivo YAML
-    #config_data: dict = configuration_file_load()
+    # Verificar si la carpeta de backups existe, si no, crearla
+    if not os.path.exists('devices'):
+        os.makedirs('devices')
+        logging.info(f'--> La carpeta {"devices"} ha sido creada')
 
+    # Cargar configuraciones desde el archivo YAML
+    # config_data: dict = configuration_file_load()
 
     tools = Tools('config.yml')
-    
+
     config_data: dict = tools.configuration_file_load()
     # Ejecutar las función random_device_status ingresando los
     # datos de configuración previamente cargados

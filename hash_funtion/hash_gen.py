@@ -2,6 +2,7 @@
 import hashlib
 import os
 import logging
+from typing import Optional
 
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
@@ -13,11 +14,11 @@ def hash_generator(fecha, mision, tipo_dispositivo, estado_dispositivo):
         salt = os.urandom(16)
 
         # Concatenar los datos con el salt
-        datos_concatenados = f"{fecha}-{mision}-{tipo_dispositivo}\
+        datos_concatenados: Optional[str] = f"{fecha}-{mision}-{tipo_dispositivo}\
             -{estado_dispositivo}-{salt}".encode('utf-8')
 
         # Aplicar el hash
-        hash_resultante = hashlib.sha256(datos_concatenados).hexdigest()
+        hash_resultante: Optional[str] = hashlib.sha256(datos_concatenados).hexdigest()
 
         return hash_resultante, salt
     except Exception as e:

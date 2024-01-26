@@ -1,15 +1,16 @@
 import yaml
 import logging
+from typing import Dict, Optional, Union, List
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
 
-def consecutive_number_update():
+def consecutive_number_update()-> Optional[None]:
     try:
 
         # Cargar la configuración actual desde el archivo config.yml
         with open('config.yml', 'r') as file:
-            configuration = yaml.safe_load(file)
+            configuration: Dict[str, Union[str, int]] = yaml.safe_load(file)
 
         # Incrementar el número consecutivos
         configuration['consecutive_number'] += 1
