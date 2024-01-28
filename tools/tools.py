@@ -28,6 +28,7 @@ class Tools:
             devices: List[str] = config_data['list_divices']
             status: List[str] = config_data['devices_status']
             consecutive_number: Optional[int] = config_data['consecutive_number']
+            report_statistics_number: Optional[int] = config_data['report_statistics_number']
             mission_label: List[str] = config_data['mission_label']
             exec_waiting_time: Optional[int] = config_data['exec_waiting_time']
 
@@ -36,6 +37,7 @@ class Tools:
                 'devices': devices,
                 'status': status,
                 'consecutive_number': consecutive_number,
+                'report_statistics_number': report_statistics_number,
                 'mission_label': mission_label,
                 'exec_waiting_time': exec_waiting_time
             }
