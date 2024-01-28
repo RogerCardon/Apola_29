@@ -1,4 +1,4 @@
-consecutive_number: 1520
+consecutive_number: 1965
 devices_status:
 - excellent
 - good
@@ -27,4 +27,4 @@ mission_label:
   OrbitOne: ORBONE
   Unknow: UNKN
   VacMars: TMRS
-report_statistics_number: 3
+report_statistics_number: 7
