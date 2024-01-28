@@ -23,7 +23,8 @@ while True:
     # Path to the configuration file
     path_configuration_file: Optional[str] = 'config.yml'
 
-    # Check if the 'devices' and 'statistics_reports' folders exist; if not, create them
+    # Check if the 'devices' and 'statistics_reports'
+    # folders exist; if not, create them
     if not os.path.exists('devices'):
         os.makedirs('devices')
         logging.info(f'--> Folder {"devices"} has been created')
@@ -40,7 +41,8 @@ while True:
 
     config_data: dict = tools.configuration_file_load()
 
-    # Execute the random_device_status function with the previously loaded configuration data
+    # Execute the random_device_status function with the previously
+    # loaded configuration data
     randomDevice = RandomDevice(path_configuration_file)
     # data_mission_devices: dict = randomDevice.random_device_status()
     data_mission_devices: dict = randomDevice()
@@ -61,7 +63,8 @@ while True:
     separator: Optional[str] = tools.separador
 
     # Path for the cycle folder
-    cycle_folder: Optional[str] = f'devices{separator}CYCLE-{cycle_date}-{missions_labels_str}'.replace(
+    cycle_folder: Optional[str] = \
+        f'devices{separator}CYCLE-{cycle_date}-{missions_labels_str}'.replace(
         ' ', '-')
     os.makedirs(cycle_folder)
 

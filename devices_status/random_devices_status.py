@@ -23,7 +23,7 @@ class RandomDevice(Tools):
             missions, range_selecting)
 
         selected_mission: Optional[str] = ', '.join(list_selected_mission)
-        logging.info(f'--> Misiones seleccionadas: {selected_mission}')
+        logging.info(f'--> Misiones: {selected_mission}')
 
         # Este diccionario contendrá los datos sobre los
         # dispositivos y sus estados respecto a las misiones seleccionadas
@@ -38,7 +38,8 @@ class RandomDevice(Tools):
             return devices_status
         except Exception as e:
             logging.error(
-                f'Se genero el error: "{e}" en la generacion aleatoria de los estados de los dispositivos')
+                f'Se genero el error: "{e}" en la generacion aleatoria de los \
+                    estados de los dispositivos')
 
     def __call__(self, ):
         devices_status_call: Dict[str] = self.random_device_status()

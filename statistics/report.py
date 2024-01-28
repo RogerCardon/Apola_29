@@ -7,7 +7,8 @@ from tabulate import tabulate
 def report_statistics_generator(report_file_name: Optional[str]):
 
     separator: Optional[str] = os.sep
-    archivo_log: Optional[str] = f'statistics_reports{separator}data_statistics.log'
+    archivo_log: Optional[str] = \
+        f'statistics_reports{separator}data_statistics.log'
 
     # Abrimos el archvio que contiene los datos
 
@@ -16,7 +17,7 @@ def report_statistics_generator(report_file_name: Optional[str]):
 
     # 1. Generar el reporte de analisis de eventos
     markdown_tables = []
-    report_1 = f'## 1. Events Analysis \n\n'
+    report_1 = '## 1. Events Analysis \n\n'
 
     for mission, devices in data.items():
         mission_table = f"### {mission}\n\n"
@@ -70,33 +71,45 @@ def report_statistics_generator(report_file_name: Optional[str]):
                 [f"{mission} - {device}", inoperable_count])
 
     consolidated_table += tabulate(consolidated_rows,
-                                   consolidated_headers, tablefmt='pipe') + "\n\n"
+                                   consolidated_headers,
+                                   tablefmt='pipe') + "\n\n"
 
     # 4. Generar el reporte de Calculo de porcentajes
     percentage_table = "## 4. Percentage Calculation\n\n"
-    percentage_headers = ['Device', 'Mission'] + ['Percentage ' + state for state in [
-        'Excellent', 'Good', 'Warning', 'Faulty', 'Killed', 'Unknown']]
+    percentage_headers = ['Device', 'Mission'] + ['Percentage ' + state
+                                                  for state in [
+                                                      'Excellent',
+                                                      'Good',
+                                                      'Warning',
+                                                      'Faulty',
+                                                      'Killed', 'Unknown']]
     percentage_rows = []
 
-    total_events = sum(events.get('excellent', 0) + events.get('good', 0) +
-                       events.get('warning', 0) + events.get('faulty', 0) +
-                       events.get('killed', 0) + events.get('unknown', 0)
-                       for devices in data.values() for events in devices.values())
+    total_events = sum(
+        events.get('excellent', 0) + events.get('good', 0) +
+        events.get('warning', 0) + events.get('faulty', 0) +
+        events.get('killed', 0) + events.get('unknown', 0)
+        for devices in data.values() for events in devices.values())
 
     # Listas para almacenar las sumas de cada columna
     column_sums = [0] * len(percentage_headers)
 
     for mission, devices in data.items():
         for device, events in devices.items():
-            device_percentage = [(events.get(state, 0) / total_events) * 100 for state in [
-                'excellent', 'good', 'warning', 'faulty', 'killed', 'unknown']]
+            device_percentage = [(
+                events.get(state, 0) / total_events) * 100 for state in [
+                    'excellent', 'good', 'warning',
+                    'faulty', 'killed', 'unknown'
+            ]]
 
             # Actualizar las sumas de cada columna
             column_sums = [sums + percentage for sums,
                            percentage in zip(column_sums, device_percentage)]
 
             percentage_rows.append(
-                [device, mission] + [f"{percentage:.2f}%" for percentage in device_percentage])
+                [device, mission] + [
+                    f"{percentage:.2f}%" for percentage in device_percentage
+                ])
 
     # Agregar la fila de sumas al final
     column_sums_row = ['**Total**', ''] + \
@@ -107,9 +120,9 @@ def report_statistics_generator(report_file_name: Optional[str]):
                                  percentage_headers, tablefmt='pipe') + "\n\n"
 
     # Escribir el archivo markdown
-    with open(f'statistics_reports{separator}{report_file_name}.md', 'w') as file:
+    with open(f'statistics_reports{separator}{report_file_name}.md', 'w')\
+            as file:
         file.write(report_1)
-
         for table in markdown_tables:
             file.write(table)
 

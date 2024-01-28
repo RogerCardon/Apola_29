@@ -14,12 +14,15 @@ def hash_generator(fecha, mision, tipo_dispositivo, estado_dispositivo):
         salt = os.urandom(16)
 
         # Concatenar los datos con el salt
-        datos_concatenados: Optional[str] = f"{fecha}-{mision}-{tipo_dispositivo}\
+        datos_concatenados: Optional[str] = \
+            f"{fecha}-{mision}-{tipo_dispositivo}\
             -{estado_dispositivo}-{salt}".encode('utf-8')
 
         # Aplicar el hash
-        hash_resultante: Optional[str] = hashlib.sha256(datos_concatenados).hexdigest()
+        hash_resultante: Optional[str] = \
+            hashlib.sha256(datos_concatenados).hexdigest()
 
         return hash_resultante, salt
     except Exception as e:
-        logging.error(f'En la generación del hash se genero un error de tipi: "{e}"')
+        logging.error(f'En la generación del hash se \
+            genero un error de tipi: "{e}"')
