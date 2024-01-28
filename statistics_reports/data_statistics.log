@@ -3,18 +3,18 @@ ColonyMoon:
     excellent: 12
     faulty: 17
     good: 15
-    killed: 18
+    killed: 19
     unknown: 6
     warning: 11
   satelite:
-    excellent: 9
+    excellent: 10
     faulty: 10
     good: 14
     killed: 17
     unknown: 17
     warning: 12
   space_vehicle:
-    excellent: 12
+    excellent: 13
     faulty: 17
     good: 18
     killed: 15
@@ -26,18 +26,18 @@ ColonyMoon:
     good: 11
     killed: 15
     unknown: 16
-    warning: 16
+    warning: 17
   spacesuit:
     excellent: 11
     faulty: 13
     good: 16
-    killed: 13
+    killed: 14
     unknown: 13
     warning: 13
 GalaxyTwo:
   other_componentsdata_mission_devices:
     excellent: 13
-    faulty: 10
+    faulty: 11
     good: 14
     killed: 10
     unknown: 13
@@ -48,9 +48,9 @@ GalaxyTwo:
     good: 15
     killed: 9
     unknown: 18
-    warning: 8
+    warning: 9
   space_vehicle:
-    excellent: 12
+    excellent: 13
     faulty: 16
     good: 11
     killed: 12
@@ -61,25 +61,25 @@ GalaxyTwo:
     faulty: 11
     good: 8
     killed: 14
-    unknown: 12
+    unknown: 13
     warning: 11
   spacesuit:
     excellent: 9
     faulty: 9
     good: 12
     killed: 11
-    unknown: 12
+    unknown: 13
     warning: 17
 OrbitOne:
   other_componentsdata_mission_devices:
     excellent: 9
-    faulty: 7
+    faulty: 8
     good: 9
     killed: 17
     unknown: 16
     warning: 22
   satelite:
-    excellent: 16
+    excellent: 17
     faulty: 8
     good: 13
     killed: 14
@@ -89,13 +89,13 @@ OrbitOne:
     excellent: 12
     faulty: 9
     good: 13
-    killed: 12
+    killed: 13
     unknown: 20
     warning: 14
   spacecraft:
     excellent: 15
     faulty: 9
-    good: 12
+    good: 13
     killed: 21
     unknown: 14
     warning: 9
@@ -104,7 +104,7 @@ OrbitOne:
     faulty: 7
     good: 15
     killed: 12
-    unknown: 14
+    unknown: 15
     warning: 14
 Unknow:
   other_componentsdata_mission_devices:
@@ -145,7 +145,7 @@ Unknow:
 VacMars:
   other_componentsdata_mission_devices:
     excellent: 7
-    faulty: 20
+    faulty: 21
     good: 15
     killed: 14
     unknown: 9
@@ -156,17 +156,17 @@ VacMars:
     good: 20
     killed: 14
     unknown: 13
-    warning: 15
+    warning: 16
   space_vehicle:
     excellent: 12
     faulty: 14
-    good: 19
+    good: 20
     killed: 5
     unknown: 19
     warning: 13
   spacecraft:
     excellent: 11
-    faulty: 20
+    faulty: 21
     good: 11
     killed: 13
     unknown: 16
@@ -175,6 +175,6 @@ VacMars:
     excellent: 15
     faulty: 13
     good: 17
-    killed: 11
+    killed: 12
     unknown: 9
     warning: 17
