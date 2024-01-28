@@ -1,0 +1,424 @@
+1. Events Analysis:
+  ColonyMoon:
+    other_componentsdata_mission_devices:
+      excellent: 11
+      faulty: 16
+      good: 15
+      killed: 18
+      unknown: 6
+      warning: 11
+    satelite:
+      excellent: 9
+      faulty: 10
+      good: 14
+      killed: 16
+      unknown: 16
+      warning: 12
+    space_vehicle:
+      excellent: 12
+      faulty: 17
+      good: 17
+      killed: 15
+      unknown: 6
+      warning: 10
+    spacecraft:
+      excellent: 6
+      faulty: 14
+      good: 11
+      killed: 15
+      unknown: 15
+      warning: 16
+    spacesuit:
+      excellent: 11
+      faulty: 12
+      good: 16
+      killed: 12
+      unknown: 13
+      warning: 13
+  GalaxyTwo:
+    other_componentsdata_mission_devices:
+      excellent: 13
+      faulty: 9
+      good: 14
+      killed: 10
+      unknown: 12
+      warning: 10
+    satelite:
+      excellent: 12
+      faulty: 8
+      good: 15
+      killed: 8
+      unknown: 18
+      warning: 7
+    space_vehicle:
+      excellent: 12
+      faulty: 16
+      good: 10
+      killed: 12
+      unknown: 8
+      warning: 10
+    spacecraft:
+      excellent: 14
+      faulty: 10
+      good: 8
+      killed: 14
+      unknown: 11
+      warning: 11
+    spacesuit:
+      excellent: 9
+      faulty: 8
+      good: 12
+      killed: 10
+      unknown: 12
+      warning: 17
+  OrbitOne:
+    other_componentsdata_mission_devices:
+      excellent: 9
+      faulty: 7
+      good: 9
+      killed: 17
+      unknown: 16
+      warning: 21
+    satelite:
+      excellent: 16
+      faulty: 8
+      good: 12
+      killed: 14
+      unknown: 20
+      warning: 9
+    space_vehicle:
+      excellent: 12
+      faulty: 9
+      good: 13
+      killed: 11
+      unknown: 20
+      warning: 14
+    spacecraft:
+      excellent: 15
+      faulty: 9
+      good: 12
+      killed: 21
+      unknown: 13
+      warning: 9
+    spacesuit:
+      excellent: 18
+      faulty: 7
+      good: 15
+      killed: 12
+      unknown: 13
+      warning: 14
+  Unknow:
+    other_componentsdata_mission_devices:
+      excellent: 15
+      faulty: 16
+      good: 17
+      killed: 11
+      unknown: 9
+      warning: 13
+    satelite:
+      excellent: 13
+      faulty: 11
+      good: 20
+      killed: 14
+      unknown: 11
+      warning: 12
+    space_vehicle:
+      excellent: 18
+      faulty: 11
+      good: 16
+      killed: 13
+      unknown: 12
+      warning: 11
+    spacecraft:
+      excellent: 11
+      faulty: 11
+      good: 11
+      killed: 16
+      unknown: 16
+      warning: 16
+    spacesuit:
+      excellent: 20
+      faulty: 16
+      good: 11
+      killed: 9
+      unknown: 15
+      warning: 10
+  VacMars:
+    other_componentsdata_mission_devices:
+      excellent: 7
+      faulty: 19
+      good: 15
+      killed: 14
+      unknown: 9
+      warning: 17
+    satelite:
+      excellent: 10
+      faulty: 10
+      good: 20
+      killed: 13
+      unknown: 13
+      warning: 15
+    space_vehicle:
+      excellent: 12
+      faulty: 14
+      good: 19
+      killed: 5
+      unknown: 19
+      warning: 12
+    spacecraft:
+      excellent: 11
+      faulty: 20
+      good: 11
+      killed: 13
+      unknown: 15
+      warning: 11
+    spacesuit:
+      excellent: 15
+      faulty: 12
+      good: 17
+      killed: 11
+      unknown: 9
+      warning: 17
+2. Disconnection Management:
+  ColonyMoon:
+    other_componentsdata_mission_devices: 6
+    satelite: 16
+    space_vehicle: 6
+    spacecraft: 15
+    spacesuit: 13
+  GalaxyTwo:
+    other_componentsdata_mission_devices: 12
+    satelite: 18
+    space_vehicle: 8
+    spacecraft: 11
+    spacesuit: 12
+  OrbitOne:
+    other_componentsdata_mission_devices: 16
+    satelite: 20
+    space_vehicle: 20
+    spacecraft: 13
+    spacesuit: 13
+  Unknow:
+    other_componentsdata_mission_devices: 9
+    satelite: 11
+    space_vehicle: 12
+    spacecraft: 16
+    spacesuit: 15
+  VacMars:
+    other_componentsdata_mission_devices: 9
+    satelite: 13
+    space_vehicle: 19
+    spacecraft: 15
+    spacesuit: 9
+3. Mission Consolidation:
+  ColonyMoon:
+    other_componentsdata_mission_devices: 24
+    satelite: 32
+    space_vehicle: 21
+    spacecraft: 30
+    spacesuit: 25
+  GalaxyTwo:
+    other_componentsdata_mission_devices: 22
+    satelite: 26
+    space_vehicle: 20
+    spacecraft: 25
+    spacesuit: 22
+  OrbitOne:
+    other_componentsdata_mission_devices: 33
+    satelite: 34
+    space_vehicle: 31
+    spacecraft: 34
+    spacesuit: 25
+  Unknow:
+    other_componentsdata_mission_devices: 20
+    satelite: 25
+    space_vehicle: 25
+    spacecraft: 32
+    spacesuit: 24
+  VacMars:
+    other_componentsdata_mission_devices: 23
+    satelite: 26
+    space_vehicle: 24
+    spacecraft: 28
+    spacesuit: 20
+4. Percentage Calculation:
+  ColonyMoon:
+    other_componentsdata_mission_devices:
+      excellent: 0.5699481865284974
+      faulty: 0.8290155440414507
+      good: 0.7772020725388601
+      killed: 0.932642487046632
+      unknown: 0.31088082901554404
+      warning: 0.5699481865284974
+    satelite:
+      excellent: 0.466321243523316
+      faulty: 0.5181347150259068
+      good: 0.7253886010362695
+      killed: 0.8290155440414507
+      unknown: 0.8290155440414507
+      warning: 0.6217616580310881
+    space_vehicle:
+      excellent: 0.6217616580310881
+      faulty: 0.8808290155440414
+      good: 0.8808290155440414
+      killed: 0.7772020725388601
+      unknown: 0.31088082901554404
+      warning: 0.5181347150259068
+    spacecraft:
+      excellent: 0.31088082901554404
+      faulty: 0.7253886010362695
+      good: 0.5699481865284974
+      killed: 0.7772020725388601
+      unknown: 0.7772020725388601
+      warning: 0.8290155440414507
+    spacesuit:
+      excellent: 0.5699481865284974
+      faulty: 0.6217616580310881
+      good: 0.8290155440414507
+      killed: 0.6217616580310881
+      unknown: 0.6735751295336788
+      warning: 0.6735751295336788
+  GalaxyTwo:
+    other_componentsdata_mission_devices:
+      excellent: 0.6735751295336788
+      faulty: 0.466321243523316
+      good: 0.7253886010362695
+      killed: 0.5181347150259068
+      unknown: 0.6217616580310881
+      warning: 0.5181347150259068
+    satelite:
+      excellent: 0.6217616580310881
+      faulty: 0.41450777202072536
+      good: 0.7772020725388601
+      killed: 0.41450777202072536
+      unknown: 0.932642487046632
+      warning: 0.3626943005181347
+    space_vehicle:
+      excellent: 0.6217616580310881
+      faulty: 0.8290155440414507
+      good: 0.5181347150259068
+      killed: 0.6217616580310881
+      unknown: 0.41450777202072536
+      warning: 0.5181347150259068
+    spacecraft:
+      excellent: 0.7253886010362695
+      faulty: 0.5181347150259068
+      good: 0.41450777202072536
+      killed: 0.7253886010362695
+      unknown: 0.5699481865284974
+      warning: 0.5699481865284974
+    spacesuit:
+      excellent: 0.466321243523316
+      faulty: 0.41450777202072536
+      good: 0.6217616580310881
+      killed: 0.5181347150259068
+      unknown: 0.6217616580310881
+      warning: 0.8808290155440414
+  OrbitOne:
+    other_componentsdata_mission_devices:
+      excellent: 0.466321243523316
+      faulty: 0.3626943005181347
+      good: 0.466321243523316
+      killed: 0.8808290155440414
+      unknown: 0.8290155440414507
+      warning: 1.0880829015544042
+    satelite:
+      excellent: 0.8290155440414507
+      faulty: 0.41450777202072536
+      good: 0.6217616580310881
+      killed: 0.7253886010362695
+      unknown: 1.0362694300518136
+      warning: 0.466321243523316
+    space_vehicle:
+      excellent: 0.6217616580310881
+      faulty: 0.466321243523316
+      good: 0.6735751295336788
+      killed: 0.5699481865284974
+      unknown: 1.0362694300518136
+      warning: 0.7253886010362695
+    spacecraft:
+      excellent: 0.7772020725388601
+      faulty: 0.466321243523316
+      good: 0.6217616580310881
+      killed: 1.0880829015544042
+      unknown: 0.6735751295336788
+      warning: 0.466321243523316
+    spacesuit:
+      excellent: 0.932642487046632
+      faulty: 0.3626943005181347
+      good: 0.7772020725388601
+      killed: 0.6217616580310881
+      unknown: 0.6735751295336788
+      warning: 0.7253886010362695
+  Unknow:
+    other_componentsdata_mission_devices:
+      excellent: 0.7772020725388601
+      faulty: 0.8290155440414507
+      good: 0.8808290155440414
+      killed: 0.5699481865284974
+      unknown: 0.466321243523316
+      warning: 0.6735751295336788
+    satelite:
+      excellent: 0.6735751295336788
+      faulty: 0.5699481865284974
+      good: 1.0362694300518136
+      killed: 0.7253886010362695
+      unknown: 0.5699481865284974
+      warning: 0.6217616580310881
+    space_vehicle:
+      excellent: 0.932642487046632
+      faulty: 0.5699481865284974
+      good: 0.8290155440414507
+      killed: 0.6735751295336788
+      unknown: 0.6217616580310881
+      warning: 0.5699481865284974
+    spacecraft:
+      excellent: 0.5699481865284974
+      faulty: 0.5699481865284974
+      good: 0.5699481865284974
+      killed: 0.8290155440414507
+      unknown: 0.8290155440414507
+      warning: 0.8290155440414507
+    spacesuit:
+      excellent: 1.0362694300518136
+      faulty: 0.8290155440414507
+      good: 0.5699481865284974
+      killed: 0.466321243523316
+      unknown: 0.7772020725388601
+      warning: 0.5181347150259068
+  VacMars:
+    other_componentsdata_mission_devices:
+      excellent: 0.3626943005181347
+      faulty: 0.9844559585492229
+      good: 0.7772020725388601
+      killed: 0.7253886010362695
+      unknown: 0.466321243523316
+      warning: 0.8808290155440414
+    satelite:
+      excellent: 0.5181347150259068
+      faulty: 0.5181347150259068
+      good: 1.0362694300518136
+      killed: 0.6735751295336788
+      unknown: 0.6735751295336788
+      warning: 0.7772020725388601
+    space_vehicle:
+      excellent: 0.6217616580310881
+      faulty: 0.7253886010362695
+      good: 0.9844559585492229
+      killed: 0.2590673575129534
+      unknown: 0.9844559585492229
+      warning: 0.6217616580310881
+    spacecraft:
+      excellent: 0.5699481865284974
+      faulty: 1.0362694300518136
+      good: 0.5699481865284974
+      killed: 0.6735751295336788
+      unknown: 0.7772020725388601
+      warning: 0.5699481865284974
+    spacesuit:
+      excellent: 0.7772020725388601
+      faulty: 0.6217616580310881
+      good: 0.8808290155440414
+      killed: 0.5699481865284974
+      unknown: 0.466321243523316
+      warning: 0.8808290155440414

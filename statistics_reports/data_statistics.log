@@ -1,0 +1,180 @@
+ColonyMoon:
+  other_componentsdata_mission_devices:
+    excellent: 11
+    faulty: 16
+    good: 15
+    killed: 18
+    unknown: 6
+    warning: 11
+  satelite:
+    excellent: 9
+    faulty: 10
+    good: 14
+    killed: 16
+    unknown: 16
+    warning: 12
+  space_vehicle:
+    excellent: 12
+    faulty: 17
+    good: 17
+    killed: 15
+    unknown: 6
+    warning: 10
+  spacecraft:
+    excellent: 6
+    faulty: 14
+    good: 11
+    killed: 15
+    unknown: 15
+    warning: 16
+  spacesuit:
+    excellent: 11
+    faulty: 12
+    good: 16
+    killed: 12
+    unknown: 13
+    warning: 13
+GalaxyTwo:
+  other_componentsdata_mission_devices:
+    excellent: 13
+    faulty: 9
+    good: 14
+    killed: 10
+    unknown: 12
+    warning: 10
+  satelite:
+    excellent: 12
+    faulty: 8
+    good: 15
+    killed: 8
+    unknown: 18
+    warning: 7
+  space_vehicle:
+    excellent: 12
+    faulty: 16
+    good: 10
+    killed: 12
+    unknown: 8
+    warning: 10
+  spacecraft:
+    excellent: 14
+    faulty: 10
+    good: 8
+    killed: 14
+    unknown: 11
+    warning: 11
+  spacesuit:
+    excellent: 9
+    faulty: 8
+    good: 12
+    killed: 10
+    unknown: 12
+    warning: 17
+OrbitOne:
+  other_componentsdata_mission_devices:
+    excellent: 9
+    faulty: 7
+    good: 9
+    killed: 17
+    unknown: 16
+    warning: 21
+  satelite:
+    excellent: 16
+    faulty: 8
+    good: 12
+    killed: 14
+    unknown: 20
+    warning: 9
+  space_vehicle:
+    excellent: 12
+    faulty: 9
+    good: 13
+    killed: 11
+    unknown: 20
+    warning: 14
+  spacecraft:
+    excellent: 15
+    faulty: 9
+    good: 12
+    killed: 21
+    unknown: 13
+    warning: 9
+  spacesuit:
+    excellent: 18
+    faulty: 7
+    good: 15
+    killed: 12
+    unknown: 13
+    warning: 14
+Unknow:
+  other_componentsdata_mission_devices:
+    excellent: 15
+    faulty: 16
+    good: 17
+    killed: 11
+    unknown: 9
+    warning: 13
+  satelite:
+    excellent: 13
+    faulty: 11
+    good: 20
+    killed: 14
+    unknown: 11
+    warning: 12
+  space_vehicle:
+    excellent: 18
+    faulty: 11
+    good: 16
+    killed: 13
+    unknown: 12
+    warning: 11
+  spacecraft:
+    excellent: 11
+    faulty: 11
+    good: 11
+    killed: 16
+    unknown: 16
+    warning: 16
+  spacesuit:
+    excellent: 20
+    faulty: 16
+    good: 11
+    killed: 9
+    unknown: 15
+    warning: 10
+VacMars:
+  other_componentsdata_mission_devices:
+    excellent: 7
+    faulty: 19
+    good: 15
+    killed: 14
+    unknown: 9
+    warning: 17
+  satelite:
+    excellent: 10
+    faulty: 10
+    good: 20
+    killed: 13
+    unknown: 13
+    warning: 15
+  space_vehicle:
+    excellent: 12
+    faulty: 14
+    good: 19
+    killed: 5
+    unknown: 19
+    warning: 12
+  spacecraft:
+    excellent: 11
+    faulty: 20
+    good: 11
+    killed: 13
+    unknown: 15
+    warning: 11
+  spacesuit:
+    excellent: 15
+    faulty: 12
+    good: 17
+    killed: 11
+    unknown: 9
+    warning: 17
