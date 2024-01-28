@@ -1,6 +1,5 @@
 from tools.tools import Tools
 import random
-from datetime import datetime
 import logging
 from typing import Dict, Callable, List, Optional
 # configurar el nivel
@@ -29,7 +28,7 @@ class RandomDevice(Tools):
         # Este diccionario contendrá los datos sobre los
         # dispositivos y sus estados respecto a las misiones seleccionadas
         devices_status: Dict[str] = {}
-        fecha: Optional[str] = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        fecha: Optional[str] = super().get_current_datetime()
         try:
             for mission in list_selected_mission:
                 devices_status[mission] = {}
@@ -40,3 +39,7 @@ class RandomDevice(Tools):
         except Exception as e:
             logging.error(
                 f'Se genero el error: "{e}" en la generacion aleatoria de los estados de los dispositivos')
+
+    def __call__(self, ):
+        devices_status_call: Dict[str] = self.random_device_status()
+        return devices_status_call

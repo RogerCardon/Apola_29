@@ -1,7 +1,6 @@
 import os
 import yaml
 import logging
-from datetime import datetime
 from tools.tools import Tools
 from typing import Dict, Optional, Any
 # configurar el nivel
@@ -10,8 +9,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 def mission_statistics_generator(carpeta_devices: Optional[str]) -> Optional[None]:
     try:
-
-        separator: Optional[str] = os.sep
+        tools = Tools('config.yml')
+        separator: Optional[str] = tools.separador
         archivo_log: Optional[str] = f'statistics_reports{separator}data_statistics.log'
 
         with open(archivo_log, 'r') as archivo:
@@ -41,7 +40,8 @@ def mission_statistics_generator(carpeta_devices: Optional[str]) -> Optional[Non
 
 def data_statistics_generator(date: Optional[str]) -> Optional[str]:
 
-    separator: Optional[str] = os.sep
+    tools = Tools('config.yml')
+    separator: Optional[str] = tools.separador
     archivo_log: Optional[str] = f'statistics_reports{separator}data_statistics.log'
 
     # Abrimos el archivo que contiene los datos
@@ -107,7 +107,7 @@ def data_statistics_generator(date: Optional[str]) -> Optional[str]:
         # Almacenar los porcentajes para cada misión
         percentage_report[mission] = mission_percentage
 
-    tools = Tools('config.yml')
+    
     config_data: dict = tools.configuration_file_load()
     report_statistics_number = config_data['report_statistics_number']
     file_name = f'APLSTATS-R{report_statistics_number}-{date}'

@@ -1,18 +1,35 @@
 import yaml
+from tools.date_provider import DateTimeProvider
+from datetime import datetime
 import logging
 import os
-from typing import Dict, Optional, Union, List
+from typing import Any, Dict, Optional, Union, List
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
 
-class Tools:
+class Tools(DateTimeProvider):
 
     _devices: Optional[str] = 'devices'
     __backups: Optional[str] = 'backups'
+    _separators: Optional[str] = os.sep
 
     def __init__(self, path_configuration_file: str):
         self.path_configuration_file = path_configuration_file
+
+    def __repr__(self):
+        return f'Tools(path_configuration_file={self.path_configuration_file!r})'
+
+    def __str__(self):
+        return f'Tools object with configuration file path: {self.path_configuration_file}'
+
+    @property
+    def separador(self):
+        return self._separators
+
+    @separador.setter
+    def separador(self, value):
+        self._separators = value
 
     def configuration_file_load(self) -> Dict[str, Union[str, int]]:
 
@@ -45,8 +62,8 @@ class Tools:
             logging.error(
                 f'Error de tipo: {e} al cargar el archvio de configuracion')
 
-    def file_cleaner(self,
-                     carpeta_origen: Optional[str],
+    @staticmethod
+    def file_cleaner(carpeta_origen: Optional[str],
                      carpeta_destino: Optional[str]) -> Optional[None]:
         # Se establece como separador de ruta aquel que arroje segun el OS
         separador_ruta: Optional[str] = os.sep
@@ -77,3 +94,6 @@ class Tools:
         except Exception as e:
             logging.error(
                 f'--> No se pudo mover los archivos generados a backups por el sigueinte error: {e}')
+
+    def get_current_datetime(self):
+        return datetime.now().strftime("%d-%m-%Y %H:%M:%S")
