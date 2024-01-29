@@ -1,180 +1,180 @@
 ColonyMoon:
   other_componentsdata_mission_devices:
     excellent: 39
-    faulty: 39
-    good: 30
-    killed: 32
-    unknown: 21
+    faulty: 40
+    good: 31
+    killed: 33
+    unknown: 22
     warning: 29
   satelite:
-    excellent: 24
-    faulty: 24
+    excellent: 25
+    faulty: 25
     good: 34
-    killed: 36
+    killed: 37
     unknown: 37
-    warning: 35
+    warning: 36
   space_vehicle:
     excellent: 32
     faulty: 42
-    good: 31
-    killed: 32
+    good: 33
+    killed: 33
     unknown: 27
-    warning: 26
+    warning: 27
   spacecraft:
     excellent: 23
     faulty: 33
-    good: 39
+    good: 40
     killed: 27
-    unknown: 37
-    warning: 31
+    unknown: 38
+    warning: 33
   spacesuit:
-    excellent: 29
-    faulty: 35
+    excellent: 30
+    faulty: 36
     good: 38
-    killed: 29
+    killed: 30
     unknown: 32
-    warning: 27
+    warning: 28
 GalaxyTwo:
   other_componentsdata_mission_devices:
     excellent: 31
-    faulty: 22
+    faulty: 25
     good: 36
     killed: 27
     unknown: 32
-    warning: 28
-  satelite:
-    excellent: 28
-    faulty: 23
-    good: 34
-    killed: 23
-    unknown: 38
     warning: 30
+  satelite:
+    excellent: 29
+    faulty: 23
+    good: 35
+    killed: 23
+    unknown: 39
+    warning: 32
   space_vehicle:
-    excellent: 26
+    excellent: 27
     faulty: 32
-    good: 34
+    good: 35
     killed: 24
-    unknown: 26
-    warning: 34
+    unknown: 28
+    warning: 35
   spacecraft:
     excellent: 40
-    faulty: 25
+    faulty: 28
     good: 22
-    killed: 31
+    killed: 33
     unknown: 30
     warning: 28
   spacesuit:
     excellent: 31
     faulty: 25
-    good: 23
-    killed: 30
-    unknown: 31
-    warning: 36
+    good: 25
+    killed: 31
+    unknown: 32
+    warning: 37
 OrbitOne:
   other_componentsdata_mission_devices:
     excellent: 24
     faulty: 27
-    good: 35
-    killed: 26
-    unknown: 37
+    good: 36
+    killed: 27
+    unknown: 40
     warning: 34
   satelite:
-    excellent: 36
+    excellent: 38
     faulty: 20
     good: 24
     killed: 35
-    unknown: 39
-    warning: 29
+    unknown: 41
+    warning: 30
   space_vehicle:
-    excellent: 30
-    faulty: 28
+    excellent: 31
+    faulty: 30
     good: 31
-    killed: 32
-    unknown: 35
+    killed: 33
+    unknown: 36
     warning: 27
   spacecraft:
-    excellent: 29
-    faulty: 25
+    excellent: 30
+    faulty: 26
     good: 33
-    killed: 41
-    unknown: 32
-    warning: 23
+    killed: 42
+    unknown: 33
+    warning: 24
   spacesuit:
-    excellent: 35
-    faulty: 30
-    good: 34
-    killed: 30
+    excellent: 36
+    faulty: 31
+    good: 36
+    killed: 31
     unknown: 29
     warning: 25
 Unknow:
   other_componentsdata_mission_devices:
-    excellent: 38
-    faulty: 35
+    excellent: 39
+    faulty: 37
     good: 34
-    killed: 31
+    killed: 34
     unknown: 27
     warning: 26
   satelite:
     excellent: 29
     faulty: 32
-    good: 32
-    killed: 35
-    unknown: 28
+    good: 34
+    killed: 37
+    unknown: 30
     warning: 35
   space_vehicle:
     excellent: 37
-    faulty: 32
-    good: 31
+    faulty: 34
+    good: 32
     killed: 34
-    unknown: 32
-    warning: 25
+    unknown: 34
+    warning: 26
   spacecraft:
     excellent: 29
-    faulty: 26
-    good: 22
-    killed: 38
-    unknown: 34
-    warning: 42
+    faulty: 27
+    good: 23
+    killed: 39
+    unknown: 36
+    warning: 43
   spacesuit:
-    excellent: 40
-    faulty: 35
-    good: 29
-    killed: 24
+    excellent: 42
+    faulty: 36
+    good: 30
+    killed: 26
     unknown: 34
     warning: 29
 VacMars:
   other_componentsdata_mission_devices:
-    excellent: 30
-    faulty: 43
+    excellent: 31
+    faulty: 45
     good: 29
-    killed: 29
-    unknown: 25
+    killed: 30
+    unknown: 26
     warning: 32
   satelite:
-    excellent: 28
-    faulty: 32
+    excellent: 29
+    faulty: 33
     good: 36
-    killed: 34
-    unknown: 25
+    killed: 35
+    unknown: 27
     warning: 33
   space_vehicle:
     excellent: 30
     faulty: 32
     good: 33
-    killed: 25
-    unknown: 37
-    warning: 31
+    killed: 27
+    unknown: 39
+    warning: 32
   spacecraft:
     excellent: 20
     faulty: 38
-    good: 32
+    good: 33
     killed: 32
-    unknown: 33
-    warning: 33
+    unknown: 35
+    warning: 35
   spacesuit:
-    excellent: 41
+    excellent: 42
     faulty: 25
-    good: 36
-    killed: 28
-    unknown: 30
+    good: 37
+    killed: 30
+    unknown: 31
     warning: 28

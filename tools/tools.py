@@ -33,6 +33,14 @@ class Tools(DateTimeProvider):
     def separador(self, value):
         self._separators = value
 
+    @classmethod
+    def get_separador(cls):
+        return cls._separators
+
+    @classmethod
+    def set_separador(cls, value):
+        cls._separators = value
+
     def configuration_file_load(self) -> Dict[str, Union[Any, str]]:
 
         path: Optional[str] = self.path_configuration_file
