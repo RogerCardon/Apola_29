@@ -1,10 +1,5 @@
-from devices_status.random_devices_status import RandomDevice
-
-
-random_device = RandomDevice()
-
-def test_random_device_status(random_device):
-    devices_status = random_device.random_device_status()
+def test_random_device_status(app):
+    devices_status = app.random_device.random_device_status()
 
     # Check if the returned value is a dictionary
     assert isinstance(devices_status, dict)
