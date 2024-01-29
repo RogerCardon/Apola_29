@@ -86,9 +86,19 @@ def report_statistics_generator(report_file_name: Optional[str]):
     percentage_rows = []
 
     total_events = sum(
-        events.get('excellent', 0) + events.get('good', 0) +
-        events.get('warning', 0) + events.get('faulty', 0) +
-        events.get('killed', 0) + events.get('unknown', 0)
+        events.get(
+            'excellent', 0
+        ) + events.get(
+            'good', 0
+        ) + events.get(
+            'warning', 0
+        ) + events.get(
+            'faulty', 0
+        ) + events.get(
+            'killed', 0
+        ) + events.get(
+            'unknown', 0
+        )
         for devices in data.values() for events in devices.values())
 
     # Listas para almacenar las sumas de cada columna

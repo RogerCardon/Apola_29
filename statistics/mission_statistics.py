@@ -97,9 +97,15 @@ def data_statistics_generator(date: Optional[str]) -> Optional[str]:
     # 4. Generar el reporte de Cálculo de porcentajes
     percentage_report: Dict[str, Dict[str, Dict[str, float]]] = {}
     total_events: int = sum(
-        events.get('excellent', 0) + events.get('good', 0) +
-        events.get('warning', 0) + events.get('faulty', 0) +
-        events.get('killed', 0) + events.get('unknown', 0)
+        events.get(
+            'excellent', 0
+        ) + events.get(
+            'good', 0
+        ) + events.get(
+            'warning', 0
+        ) + events.get(
+            'faulty', 0) + events.get(
+            'killed', 0) + events.get('unknown', 0)
         for devices in data.values() for events in devices.values())
 
     for mission, devices in data.items():
