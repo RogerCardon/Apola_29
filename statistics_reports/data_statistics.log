@@ -172,9 +172,10 @@ VacMars:
     unknown: 33
     warning: 33
   spacesuit:
-    excellent: 41
-    faulty: 24
-    good: 36
-    killed: 28
-    unknown: 29
-    warning: 28
+
+    excellent: 33
+    faulty: 23
+    good: 31
+    killed: 26
+    unknown: 24
+
