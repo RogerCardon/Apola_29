@@ -46,8 +46,9 @@ def file_generator(path: Optional[str],
                     result = file_x.write(str(yaml_content))
 
                 consecutive_number_update()
+
         return result
     except Exception as e:
         logging.error(
-            f'En el ageneración de los archvios \
-                .log se genero el error: "{e}"')
+            f'En el ageneración de los archvios'
+            f'.log se genero el error: "{e}"')
