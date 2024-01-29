@@ -10,7 +10,8 @@ from typing import Dict, List, Optional
 logging.basicConfig(level=logging.DEBUG)
 
 
-def file_generator(path: Optional[str], data_mission_devices: Dict[str, str]) -> Optional[str]:
+def file_generator(path: Optional[str],
+                   data_mission_devices: Dict[str, str]) -> Optional[str]:
     try:
         data_device: Dict[str, str] = {}
         registry_number: Optional[int] = None
@@ -48,4 +49,5 @@ def file_generator(path: Optional[str], data_mission_devices: Dict[str, str]) ->
         return result
     except Exception as e:
         logging.error(
-            f'En el ageneración de los archvios .log se genero el error: "{e}"')
+            f'En el ageneración de los archvios \
+                .log se genero el error: "{e}"')

@@ -1,11 +1,11 @@
 import yaml
 import logging
-from typing import Dict, Optional, Union, List
+from typing import Dict, Optional, Union
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
 
-def consecutive_number_update()-> Optional[None]:
+def consecutive_number_update() -> Optional[None]:
     try:
 
         # Cargar la configuración actual desde el archivo config.yml
@@ -22,9 +22,9 @@ def consecutive_number_update()-> Optional[None]:
     except Exception as e:
         logging.error(
             f'Error de tipo: {e} al generar el numero consecutivo')
-        
 
-def report_statistics_number_update()-> Optional[None]:
+
+def report_statistics_number_update() -> Optional[None]:
     try:
 
         # Cargar la configuración actual desde el archivo config.yml

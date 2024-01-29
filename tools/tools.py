@@ -1,20 +1,39 @@
 import yaml
+from tools.date_provider import DateTimeProvider
+from datetime import datetime
 import logging
 import os
-from typing import Dict, Optional, Union, List
+from typing import Dict, Optional, Union, List, Any
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
 
-class Tools:
+class Tools(DateTimeProvider):
 
     _devices: Optional[str] = 'devices'
     __backups: Optional[str] = 'backups'
+    _separators: Optional[str] = os.sep
 
     def __init__(self, path_configuration_file: str):
         self.path_configuration_file = path_configuration_file
 
-    def configuration_file_load(self) -> Dict[str, Union[str, int]]:
+    def __repr__(self):
+        return f'Tools(path_configuration_file= \
+            {self.path_configuration_file!r})'
+
+    def __str__(self):
+        return f'Tools object with configuration file path:\
+            {self.path_configuration_file}'
+
+    @property
+    def separador(self):
+        return self._separators
+
+    @separador.setter
+    def separador(self, value):
+        self._separators = value
+
+    def configuration_file_load(self) -> Dict[str, Union[Any, str]]:
 
         path: Optional[str] = self.path_configuration_file
 
@@ -27,8 +46,10 @@ class Tools:
             missions: List[str] = config_data['list_misions']
             devices: List[str] = config_data['list_divices']
             status: List[str] = config_data['devices_status']
-            consecutive_number: Optional[int] = config_data['consecutive_number']
-            report_statistics_number: Optional[int] = config_data['report_statistics_number']
+            consecutive_number: Optional[int] = \
+                config_data['consecutive_number']
+            report_statistics_number: Optional[int] = \
+                config_data['report_statistics_number']
             mission_label: List[str] = config_data['mission_label']
             exec_waiting_time: Optional[int] = config_data['exec_waiting_time']
 
@@ -45,8 +66,8 @@ class Tools:
             logging.error(
                 f'Error de tipo: {e} al cargar el archvio de configuracion')
 
-    def file_cleaner(self,
-                     carpeta_origen: Optional[str],
+    @staticmethod
+    def file_cleaner(carpeta_origen: Optional[str],
                      carpeta_destino: Optional[str]) -> Optional[None]:
         # Se establece como separador de ruta aquel que arroje segun el OS
         separador_ruta: Optional[str] = os.sep
@@ -58,22 +79,26 @@ class Tools:
 
         # Obtener la lista de archivos en la carpeta de origen
         archivos_a_mover: List[str] = os.listdir(carpeta_origen)
-        archivos_movidos: Optional[int] = 0
 
         # Mover cada archivo a la carpeta de backups
         try:
             for archivo in archivos_a_mover:
 
-                ruta_origen: Optional[str] = f'{carpeta_origen}{separador_ruta}{archivo}'
-                ruta_destino: Optional[str] = f'{carpeta_destino}{separador_ruta}{archivo}'
+                ruta_origen: Optional[str] = \
+                    f'{carpeta_origen}{separador_ruta}{archivo}'
+                ruta_destino: Optional[str] = \
+                    f'{carpeta_destino}{separador_ruta}{archivo}'
 
                 # Renombrar el archivo moviéndolo
                 os.rename(ruta_origen, ruta_destino)
-                archivos_movidos += 1
 
             logging.info(
-                f'--> Se movieron {archivos_movidos} archivos a la carpeta backups.')
+                '--> Se movieron los archivos de "devices" a "backups".')
 
         except Exception as e:
             logging.error(
-                f'--> No se pudo mover los archivos generados a backups por el sigueinte error: {e}')
+                f'--> No se pudo mover los archivos generados\
+                    a backups por el sigueinte error: {e}')
+
+    def get_current_datetime(self):
+        return datetime.now().strftime("%d-%m-%Y %H:%M:%S")
