@@ -93,12 +93,12 @@ class Tools(DateTimeProvider):
                 os.rename(ruta_origen, ruta_destino)
 
             logging.info(
-                '--> Se movieron los archivos de "devices" a "backups".')
+                '--> The files has been moved from "devices" to "backups".')
 
         except Exception as e:
             logging.error(
-                f'--> No se pudo mover los archivos generados\
-                    a backups por el sigueinte error: {e}')
+                f'-->  No se pudo mover los archivos generados'
+                f'a backups por el sigueinte error: {e}')
 
     def get_current_datetime(self):
         return datetime.now().strftime("%d-%m-%Y %H:%M:%S")
