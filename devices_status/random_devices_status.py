@@ -2,7 +2,8 @@ from tools.tools import Tools
 import random
 import logging
 from typing import Dict, Callable, List, Optional
-# configurar el nivel
+
+# Set the logging level
 logging.basicConfig(level=logging.DEBUG)
 
 
@@ -12,21 +13,21 @@ class RandomDevice(Tools):
 
         data_config: Callable[[], Dict[str, str]
                               ] = super().configuration_file_load()
-        # Se cargan las variables a utilizar desde data_config
+        # Load variables to be used from data_config
         missions: List[str] = data_config['missions']
         devices: List[str] = data_config['devices']
         status: List[str] = data_config['status']
 
-        # Se seleccionan las misiones que se utilizaran
+        # Select missions to be used
         range_selecting: Optional[int] = random.randint(1, 5)
         list_selected_mission: List[str] = random.sample(
             missions, range_selecting)
 
         selected_mission: Optional[str] = ', '.join(list_selected_mission)
-        logging.info(f'--> Misiones: {selected_mission}')
+        logging.info(f'--> Missions: {selected_mission}')
 
-        # Este diccionario contendrá los datos sobre los
-        # dispositivos y sus estados respecto a las misiones seleccionadas
+        # This dictionary will contain data about devices and their states
+        # with respect to the selected missions
         devices_status: Dict[str] = {}
         fecha: Optional[str] = super().get_current_datetime()
         try:
@@ -38,8 +39,8 @@ class RandomDevice(Tools):
             return devices_status
         except Exception as e:
             logging.error(
-                f'Se genero el error: "{e}" en la generacion aleatoria de los \
-                    estados de los dispositivos')
+                f'Error occurred: "{e}" during random'
+                f'generation of device states')
 
     def __call__(self, ):
         devices_status_call: Dict[str] = self.random_device_status()

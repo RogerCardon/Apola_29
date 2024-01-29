@@ -2,17 +2,19 @@ import os
 import yaml
 import logging
 from tools.tools import Tools
-from typing import Dict, Optional, Any
+from typing import Dict, Optional, Any, List
 
 # configurar el nivel
 logging.basicConfig(level=logging.DEBUG)
 
 
-def mission_statistics_generator(carpeta_devices: Optional[str]) -> Optional[None]:
+def mission_statistics_generator(
+        carpeta_devices: Optional[str]) -> Optional[None]:
     try:
         tools: Tools = Tools('config.yml')
         separator: Optional[str] = tools.separador
-        archivo_log: Optional[str] = f'statistics_reports{separator}data_statistics.log'
+        archivo_log: Optional[str] = \
+            f'statistics_reports{separator}data_statistics.log'
 
         with open(archivo_log, 'r') as archivo:
             statistics_mission_devices: Dict[str,
@@ -42,7 +44,8 @@ def mission_statistics_generator(carpeta_devices: Optional[str]) -> Optional[Non
 def data_statistics_generator(date: Optional[str]) -> Optional[str]:
     tools: Tools = Tools('config.yml')
     separator: Optional[str] = tools.separador
-    archivo_log: Optional[str] = f'statistics_reports{separator}data_statistics.log'
+    archivo_log: Optional[str] = \
+        f'statistics_reports{separator}data_statistics.log'
 
     # Abrimos el archivo que contiene los datos
     with open(archivo_log, 'r') as file:
@@ -105,8 +108,11 @@ def data_statistics_generator(date: Optional[str]) -> Optional[str]:
             # Calcular y almacenar el porcentaje de cada estado
             # para cada dispositivo
             device_percentage: Dict[str, float] = {
-                state.lower(): (events.get(state.lower(), 0) / total_events) * 100
-                for state in ['excellent', 'good', 'warning', 'faulty', 'killed', 'unknown']
+                state.lower(): (
+                    events.get(state.lower(), 0) / total_events) * 100
+                for state in ['excellent', 'good',
+                              'warning', 'faulty', 'killed',
+                              'unknown']
             }
             mission_percentage[device] = device_percentage
 

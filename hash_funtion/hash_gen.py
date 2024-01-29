@@ -1,28 +1,27 @@
-# hash: nombre+fecha+tipoDispo de 16
+# hash: name+date+deviceType of 16
 import hashlib
 import os
 import logging
 from typing import Optional
 
-# configurar el nivel
+# Set the logging level
 logging.basicConfig(level=logging.DEBUG)
 
 
-def hash_generator(fecha, mision, tipo_dispositivo, estado_dispositivo):
+def hash_generator(date, mission, device_type, device_status):
     try:
-        # Generar salt
+        # Generate salt
         salt = os.urandom(16)
 
-        # Concatenar los datos con el salt
-        datos_concatenados: Optional[str] = \
-            f"{fecha}-{mision}-{tipo_dispositivo}\
-            -{estado_dispositivo}-{salt}".encode('utf-8')
+        # Concatenate data with salt
+        concatenated_data: Optional[str] = \
+            f"{date}-{mission}-{device_type}\
+            -{device_status}-{salt}".encode('utf-8')
 
-        # Aplicar el hash
-        hash_resultante: Optional[str] = \
-            hashlib.sha256(datos_concatenados).hexdigest()
+        # Apply hash
+        hashed_result: Optional[str] = \
+            hashlib.sha256(concatenated_data).hexdigest()
 
-        return hash_resultante, salt
+        return hashed_result, salt
     except Exception as e:
-        logging.error(f'En la generación del hash se \
-            genero un error de tipi: "{e}"')
+        logging.error(f'Error occurred during hash generation: "{e}"')
